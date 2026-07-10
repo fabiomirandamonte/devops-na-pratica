@@ -30,7 +30,7 @@ jobs:
     - name: Build with Maven
       run: |
         cd api-spring
-        mvn clean package -DskipTests
+        mvn clean package -Dmaven.test.skip=true
 
     # 4. Faz o login automático no seu Docker Hub usando os Secrets criados
     - name: Log in to Docker Hub
